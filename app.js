@@ -59,6 +59,7 @@ function start(){
 
    document.getElementById("mode").textContent=
    "운동";
+   document.body.className = "work";
  }
 
  running=true;
@@ -127,8 +128,8 @@ document.getElementById("resetBtn")
 .addEventListener("click", () => {
 	
     workTime = 0;
-restTime = 0;
-totalRounds = 0;
+    restTime = 0;
+    totalRounds = 0;
     clearInterval(timer);
 
     running = false;
