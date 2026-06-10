@@ -96,6 +96,7 @@ function tick(){
          "완료 🎉";
 
          running=false;
+currentTime = 0;
 
          return;
       }
@@ -113,3 +114,40 @@ function tick(){
    }
  }
 }
+
+document.getElementById("pauseBtn")
+.addEventListener("click", () => {
+
+    clearInterval(timer);
+    running = false;
+
+});
+
+document.getElementById("resetBtn")
+.addEventListener("click", () => {
+	
+    workTime = 0;
+restTime = 0;
+totalRounds = 0;
+    clearInterval(timer);
+
+    running = false;
+
+    mode = "work";
+
+    round = 1;
+
+    currentTime = 0;
+
+    document.body.className = "";
+
+    document.getElementById("mode").textContent =
+    "대기중";
+
+    document.getElementById("timer").textContent =
+    "00:00";
+
+    document.getElementById("round").textContent =
+    "라운드 0 / 0";
+
+});
